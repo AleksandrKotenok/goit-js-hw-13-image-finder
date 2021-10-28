@@ -20,14 +20,12 @@ export default class APIpixabay {
       return response.json();
     })
   }
-
    nextPage() {
       this.page += 1
    }
   get q() {
     return this.search
   }
-
   set q(newQuery) {
     this.search = newQuery
   }

@@ -7,9 +7,6 @@ import '@pnotify/core/dist/BrightTheme.css';
 import APIpixabay from './apiService.js'
 const API = new APIpixabay()
 import picture from '../templates/listPictures.hbs'
-
-import MyNotification from './notification.js'
-const notification = new MyNotification()
 //elements
 const search = document.querySelector('.search-form')
 const more = document.querySelector('.more')
@@ -21,7 +18,6 @@ more.style.display = 'none'
 
 function searchImg(event) {
    API.q = event.target.value
-   
    insertPoint.innerHTML = ''
    if (API.q !== '') { // перевірка на пустий запит
       console.log(`текст запиту = `,event.target.value,`. Пошук з сторінки №`, API.page)
@@ -60,7 +56,6 @@ function loadMore() {
 function scroll() {
    setTimeout(() => {more.scrollIntoView({behavior: 'smooth',block: 'end'})}, 1000)
 }
-
 function noValue() {
    notice ({
    text: 'Введіть текст для пошуку!',
@@ -73,7 +68,6 @@ function noValue() {
    hide: true
 })
 }
-
 function err() {
 error({
    text: 'Помилка',
@@ -86,7 +80,6 @@ error({
    hide: true
 })
 }
-
 function noMore() {
    error({
    text: 'За вашим запитом данні відсутні або відображені всі зображення',

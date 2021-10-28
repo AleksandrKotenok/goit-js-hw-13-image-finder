@@ -1,0 +1,40 @@
+.gallery{
+   display: flex;
+   flex-wrap: wrap;
+}
+.gallery-item{
+   display: flex;
+   flex-direction: column;
+   justify-content:space-between;
+   border: solid;
+   border-color: #5656fa;
+   list-style-type: none;
+   margin-top: 10px;
+}
+.gallery-item:not(:last-child){
+   margin-right: 10px;
+}
+.photo-card{
+   display: flex;
+   flex-direction: column;
+}
+.stats{
+   display: flex;
+   justify-content: center;
+}
+.stats-item{
+   display: flex;
+   align-items: center;
+}
+.stats-item:not(:last-child){
+   margin-right: 10px;
+}
+.more{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: auto;
+   min-width: 400px;
+   min-height: 50px;
+   margin-bottom: 10px;
+}

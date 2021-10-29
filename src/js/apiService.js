@@ -16,8 +16,8 @@ export default class APIpixabay {
   fetchApi() {
     const url = `${BASE_URL}?image_type=${imageType}&orientation=${orientation}&q=${this.search}&page=${this.page}&per_page=${perPage}&key=${API_KEY}`
     return fetch(url).then(response => {
-      this.nextPage();
-      return response.json();
+      this.nextPage()
+      return response.json()
     })
   }
    nextPage() {
